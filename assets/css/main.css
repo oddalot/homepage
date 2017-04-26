@@ -858,10 +858,11 @@
 
     #portfolio {
       display: none;
+      min-height: 520px;
     }
 
     .portfolio-header {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
 
     .avatar h1 {
@@ -870,18 +871,29 @@
       margin: 0 auto;
     }
 
+    #portfolio .button {
+      margin-bottom: 15px;
+    }
+
+    #portfolio .grid {
+      margin: -10px;
+    }
+
     #portfolio .grid-item {
+      display: inline-block;
       width: 33.33%;
-      display:table-cell;
-      vertical-align:middle;
-      text-align:center;
+      padding: 10px;
+    }
+
+
+		@media screen and (max-width: 480px) {
+      #portfolio .grid-item {
+        width: 50%;
+      }
     }
 
     #portfolio .project-image img {
-      display: block;
-      margin: auto auto;
       border-radius: 100%;
-      padding: 10px;
       width: 100%;
     }
 
@@ -895,11 +907,6 @@
       left: 15px;
       font-size: 30px;
       cursor: pointer;
-    }
-
-    #portfolio .grid {
-      margin: -10px;
-      text-align: justify;
     }
 
     .button.is-checked {
