@@ -860,6 +860,10 @@
       display: none;
     }
 
+    .portfolio-header {
+      margin-bottom: 30px;
+    }
+
     .avatar h1 {
       background-color: white;
       width: 250px;
