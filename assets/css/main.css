@@ -867,7 +867,8 @@
 
     .avatar h1 {
       background-color: white;
-      width: 250px;
+      display: inline-block;
+      padding: 0 1.5em;
       margin: 0 auto;
     }
 
