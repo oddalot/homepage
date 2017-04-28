@@ -48,10 +48,12 @@
                   <h1>Portfolio</h1>
                 </span>
               </header>
-              <a href="#" id="button-all" class="button">All</a>
-              <a href="#" id="button-javascript" class="button">Javascript</a>
-              <a href="#" id="button-android" class="button">Android</a>
-              <a href="#" id="button-rails" class="button">Rails</a>
+              <div id="portfolio-wrapper">
+                <a href="#" id="button-all" class="button">All</a>
+                <a href="#" id="button-javascript" class="button">Javascript</a>
+                <a href="#" id="button-android" class="button">Android</a>
+                <a href="#" id="button-rails" class="button">Rails</a>
+              </div>
 
               <footer>
                 <div class="grid">
@@ -124,45 +126,34 @@
           layoutMode: 'fitRows'
         });
 
-        var allButton = document.getElementById("button-all");
-        var javascriptButton = document.getElementById("button-javascript");
-        var androidButton = document.getElementById("button-android");
-        var railsButton = document.getElementById("button-rails");
+        var portfolioWrapper = document.getElementById('portfolio-wrapper');
+        var portfolioButtons = portfolioWrapper.querySelectorAll('.button');
 
         function buttonCheck(element) {
-          var buttons = element.parentElement.querySelectorAll('.button')
-          buttons.forEach(function(el) {
+          portfolioButtons.forEach(function(el) {
             el.classList.remove('is-checked');
           });
           element.classList.add('is-checked');
         }
 
-        allButton.addEventListener("click", function (e) {
+        portfolioWrapper.addEventListener("click", function (e) {
           e.preventDefault();
           e.stopPropagation();
           buttonCheck(e.target);
-          iso.arrange({filter: ''});
-        });
-
-        railsButton.addEventListener("click", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          buttonCheck(e.target);
-          iso.arrange({filter: '.rails'});
-        });
-
-        androidButton.addEventListener("click", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          buttonCheck(e.target);
-          iso.arrange({filter: '.android'});
-        });
-
-        javascriptButton.addEventListener("click", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          buttonCheck(e.target);
-          iso.arrange({filter: '.javascript'});
+          switch (e.target.id) {
+            case 'button-all':
+              iso.arrange({filter: ''});
+              break;
+            case 'button-javascript':
+              iso.arrange({filter: '.javascript'});
+              break;
+            case 'button-android':
+              iso.arrange({filter: '.android'});
+              break;
+            case 'button-rails':
+              iso.arrange({filter: '.rails'});
+              break;
+          }
         });
 			</script>
 
