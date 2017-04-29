@@ -19,9 +19,9 @@ if ('addEventListener' in window) {
     layoutMode: 'fitRows'
   });
   var buttonCheck = function (element) {
-    portfolioButtons.forEach(function(el) {
-      el.classList.remove('is-checked');
-    });
+    for (var i = 0; i < portfolioButtons.length; i++) {
+      portfolioButtons[i].classList.remove('is-checked');
+    }
     element.classList.add('is-checked');
   };
   var screenLoad = function () {
