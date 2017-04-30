@@ -6,3 +6,6 @@
 
 # apache
 .htaccess
+
+# node
+functions/node_modules
