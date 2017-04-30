@@ -7,10 +7,10 @@ if ('addEventListener' in window) {
 
 (function () {
   var root = null;
-  var useHash = true;
-  var hash = '#!';
-  var router = new Navigo(root, useHash, hash);
-  var root = document.getElementById("root");
+  var useHash = false;
+  var hash = '%';
+  var router = new Navigo();
+  var root = document.getElementById("root", useHash);
   var portfolio = document.getElementById("portfolio");
   var portfolioWrapper = document.getElementById('portfolio-wrapper');
   var portfolioButtons = portfolioWrapper.querySelectorAll('.button');
