@@ -894,8 +894,40 @@
     }
 
     #portfolio .project-image img {
+      position: relative;
+      display: block;
       border-radius: 100%;
       width: 100%;
+      vertical-align: top;
+    }
+
+    .image-wrap {
+      position: relative;
+      font-size: 0;
+      top: 0;
+      transition: top linear 0.2s;
+    }
+
+    .image-wrap:hover {
+      top: -10px;
+    }
+
+    .image-wrap:hover::after {
+      opacity: 1;
+    }
+
+    .image-wrap::after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 100%;
+      background-color: rgba(255, 116, 150, 0.9);
+      transition: opacity linear 0.2s;
+      cursor: pointer;
     }
 
     #portfolio footer {
