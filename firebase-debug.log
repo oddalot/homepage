@@ -1,27 +1,35 @@
 [debug] ----------------------------------------------------------------------
-[debug] Command:      /usr/bin/nodejs /usr/local/bin/firebase serve -p 5001
+[debug] Command:      /usr/bin/nodejs /usr/local/bin/firebase serve
 [debug] CLI Version:  3.7.0
 [debug] Platform:     linux
 [debug] Node Version: v4.2.6
-[debug] Time:         Mon May 08 2017 11:17:48 GMT-0400 (EDT)
+[debug] Time:         Wed May 10 2017 22:05:41 GMT-0400 (EDT)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/AuSAF8YjSoowgMJu8x3ySKzs2CIYjeWbTPZTuy0-Dak',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed May 10 2017 22:05:41 GMT-0400 (EDT)
+[debug] <<< HTTP RESPONSE 200
 [debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/homepage-818e2  
- Mon May 08 2017 11:17:48 GMT-0400 (EDT)
+ Wed May 10 2017 22:05:41 GMT-0400 (EDT)
 [debug] <<< HTTP RESPONSE 200
 [debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/homepage-818e2/tokens  
- Mon May 08 2017 11:17:50 GMT-0400 (EDT)
+ Wed May 10 2017 22:05:42 GMT-0400 (EDT)
 [debug] <<< HTTP RESPONSE 200
 [info] Starting Firebase development server...
 [info] 
 [info] Project Directory: /home/oddalot/Development/homepage
 [debug] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/homepage-818e2  
- Mon May 08 2017 11:17:50 GMT-0400 (EDT)
+ Wed May 10 2017 22:05:42 GMT-0400 (EDT)
 [debug] <<< HTTP RESPONSE 200
 [debug] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/669414395294/clients/_:getWebAppConfig  
- Mon May 08 2017 11:17:51 GMT-0400 (EDT)
+ Wed May 10 2017 22:05:42 GMT-0400 (EDT)
 [debug] <<< HTTP RESPONSE 200
 [info] Public Directory: public
 [info] 
-[info] Server listening at: http://localhost:5001
+[info] Server listening at: http://localhost:5000
