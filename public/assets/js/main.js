@@ -12,6 +12,7 @@ if ('addEventListener' in window) {
   var router = new Navigo();
   var root = document.getElementById("root", useHash);
   var portfolio = document.getElementById("portfolio");
+  var resume = document.getElementById("resume");
   var portfolioWrapper = document.getElementById('portfolio-wrapper');
   var portfolioButtons = portfolioWrapper.querySelectorAll('.button');
   var iso = new Isotope( '.grid', {
@@ -36,14 +37,23 @@ if ('addEventListener' in window) {
   router
   .on('/', function () {
     portfolio.style.display = "none";
+    resume.style.display = "none";
     document.body.classList.add("is-loading");
     root.style.display = "block";
     screenLoad();
   })
   .on('/portfolio', function () {
     root.style.display = "none";
+    resume.style.display = "none";
     document.body.classList.add("is-loading");
     portfolio.style.display = "block";
+    screenLoad();
+  })
+  .on('/resume', function () {
+    root.style.display = "none";
+    portfolio.style.display = "none";
+    document.body.classList.add("is-loading");
+    resume.style.display = "block";
     screenLoad();
   })
   .resolve();

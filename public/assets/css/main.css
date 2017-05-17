@@ -861,6 +861,11 @@
       min-height: 500px;
     }
 
+    #resume {
+      display: none;
+      min-height: 500px;
+    }
+
     .portfolio-header {
       margin-bottom: 15px;
     }
@@ -934,7 +939,7 @@
       margin: 30px auto;
     }
 
-    #portfolio .back-arrow {
+    #portfolio .back-arrow, #resume .back-arrow {
       position: absolute;
       top: 12px;
       left: 15px;
@@ -965,4 +970,22 @@
       border-top-color: #ff7496;
       border-top-width: 10px;
       opacity: 1;
+    }
+
+    .resume-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
+    .text-link {
+      color: #ff7496;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    #resume header {
+      margin-bottom: 20px;
     }
